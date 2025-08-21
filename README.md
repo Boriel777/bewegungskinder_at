@@ -1,4 +1,4 @@
-# bewegungskinder.at – Website Relaunch
+# bewegungskinder.com – Website Relaunch
 
 A custom web design & development project for **Bewegungskinder**, a physiotherapy practice in Austria.  
 The project involved refreshing the visual identity, creating a responsive design in Figma, and implementing it within the **Kutego CMS** using custom HTML, CSS, and JavaScript.
