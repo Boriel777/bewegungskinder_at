@@ -3,13 +3,28 @@
 A custom web design & development project for **Bewegungskinder**, a physiotherapy practice in Austria.  
 The project involved refreshing the visual identity, creating a responsive design in Figma, and implementing it within the **Kutego CMS** using custom HTML, CSS, and JavaScript.
 
+# Client Project – Portfolio Showcase
+
+👋 Welcome! This repository exists only to demonstrate my professional work.  
+
+## License & Usage
+- **Viewing only** – You are welcome to browse the code and assets.  
+- **No copying, reuse, or distribution** is allowed without my explicit permission.  
+- For licensing inquiries, please contact me directly:  
+  📧 dalibor.durbas@gmail.com  
+
+---
+
+⚠️ Note: This is a proprietary project. Unauthorized use is prohibited.  
+
+
 ---
 
 ## 🔎 Overview
 - **Client**: Bewegungskinder (Physiotherapy for children & families)  
 - **Scope**: Visual Identity refresh, responsive web design, CMS integration  
 - **Role**: Design, Frontend Development, CMS adaptation  
-- **Timeline**: 2025  
+- **Timeline**: 2025
 
 ---
 
