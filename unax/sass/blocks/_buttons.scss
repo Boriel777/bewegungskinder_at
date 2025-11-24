@@ -1,0 +1,20 @@
+.wp-block-button,
+.wp-block-button__link {
+    color: inherit;
+    &:active,
+    &:focus,
+    &:hover,
+    &:visited {
+        color: inherit;
+    }
+    &:not(.has-text-color) {
+        color: $white;
+    }
+}
+
+.is-style-outline {
+    color: inherit;
+    &:hover {
+        color: inherit;
+    }
+}

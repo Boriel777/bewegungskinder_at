@@ -1,0 +1,124 @@
+/*!
+Theme Name: Unax
+Theme URI: https://unax.org/unax-theme
+Author: Atanas Antonov
+Author URI: https://unax.org
+Description: Lightweight theme based on Underscores and Twitter Bootstrap. Clean and modern design. No sidebar and full width page templates. Plenty of widget areas are registered as well as several menu locations. Theme includes different filters for layout classes. Bootstrap colors with the appropriate filters integrated in Gutenberg color palette. Web Content Accessibility Guidelines (WCAG) compatible.
+Tags: block-styles, blog, custom-logo, e-commerce, editor-style, featured-images, full-width-template, grid-layout, right-sidebar, translation-ready
+Version: 1.3.2
+Tested up to: 6.5
+Requires at least: 5.0
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Underscores (https://underscores.me) License: GPLv2 or later (https://www.gnu.org/licenses/old-licenses/gpl-2.0.html), (C) 2012-2020 Automattic, Inc.
+Bootstrap (https://getbootstrap.com) License: MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE), Copyright 2011-2019 The Bootstrap Authors, Copyright 2011-2019 Twitter, Inc.
+Font Awesome (https://fontawesome.com) License: Font Awesome Free (https://fontawesome.com/license), Copyright Fonticons, Inc.
+Gulp (https://gulpjs.com) License: MIT (https://github.com/gulpjs/gulp/blob/master/LICENSE) Copyright 2013-2018 Blaine Bublitz, Eric Schoffstall and other contributors
+
+Text Domain: unax
+Domain Path: /languages
+
+Unax is distributed under the terms of the GNU GPL v2 or later.
+
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* Bootstrap */
+@import "bootstrap-4/bootstrap";
+
+/* Variables Site */
+@import "variables-site/variables-site";
+
+/* Mixins */
+@import "mixins/mixins-effects";
+@import "mixins/mixins-master";
+
+$primary:   var( --wp--preset--color--primary );
+$secondary: var( --wp--preset--color--secondary );
+$success:   var( --wp--preset--color--success );
+$danger:    var( --wp--preset--color--danger );
+$warning:   var( --wp--preset--color--warning );
+$info:      var( --wp--preset--color--info );
+$white:     var( --wp--preset--color--white );
+$light:     var( --wp--preset--color--light );
+$dark:      var( --wp--preset--color--dark );
+$black:     var( --wp--preset--color--black );
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "media/media";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "elements/elements";
+@import "elements/buttons";
+@import "elements/fields";
+@import "elements/links";
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+@import "navigation/main-navigation";
+@import "navigation/mobile-menu";
+@import "navigation/menu-media-queries";
+@import "navigation/widget-menu";
+
+/*--------------------------------------------------------------
+## Tabs
+--------------------------------------------------------------*/
+@import "navigation/tabs";
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+@import "layout/header";
+@import "layout/content";
+@import "layout/footer";
+
+/*--------------------------------------------------------------
+# Shop
+--------------------------------------------------------------*/
+@import "woocommerce/components";
+@import "woocommerce/tables";
+@import "woocommerce/products";
+@import "woocommerce/single-product";
+@import "woocommerce/cart";
+@import "woocommerce/checkout";
+@import "woocommerce/widgets";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/cards";
+@import "components/comments";
+@import "components/widgets";
+
+/*--------------------------------------------------------------
+## Content
+--------------------------------------------------------------*/
+@import "content/alignments";
+@import "content/core";
+@import "content/clearings";
+@import "content/posts-and-pages";
+@import "content/single";
+
+/*--------------------------------------------------------------
+# Blocks
+--------------------------------------------------------------*/
+@import "blocks/buttons";
+@import "blocks/columns";
+@import "blocks/cover";
+@import "blocks/gallery";
+@import "blocks/latest";
+
+/*--------------------------------------------------------------
+# Templates
+--------------------------------------------------------------*/

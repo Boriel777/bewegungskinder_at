@@ -1,0 +1,85 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Elements
+# Alignments
+# Navigation
+# Layout
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+body {
+	text-align: right;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	float: right;
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.alignright {
+	float: left;
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 1.5em;
+}
+
+.text-lg-left {
+	text-align: right !important;;
+}
+
+.text-lg-right {
+    text-align: left !important;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+.comment-navigation .nav-links,
+.posts-navigation .nav-links,
+.post-navigation .nav-links {
+	flex-direction: row-reverse;
+}
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+.site-content .site-main {
+
+}
+@media only screen and (min-width: 992px) {
+	.site-content .site-main {
+
+	}
+
+	.site-content .widget-area {
+		margin-left: 0;
+		margin-right: 3%;
+	}
+
+	.site-content .widget-area ul {
+		margin-right: -1rem;
+	}
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@media only screen and (min-width: 992px) {
+	.widget_unax_contacts .contacts,
+	.widget_unax_contacts .socials {
+		justify-content: flex-end;
+	}
+}

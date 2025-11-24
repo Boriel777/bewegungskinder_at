@@ -1,0 +1,27 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	padding: 0 0 .6rem;
+	letter-spacing: -.02rem;
+	word-spacing: .03rem;
+}
+
+h1 {
+	font-size: 32px;
+	@include media-breakpoint-up(lg) {
+		font-size: 48px;
+	}
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+h2 {
+	font-size: 24px;
+	@include media-breakpoint-up(lg) {
+		font-size: 32px;
+	}
+}

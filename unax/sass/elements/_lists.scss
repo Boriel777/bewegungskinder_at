@@ -1,0 +1,32 @@
+ul,
+ol {
+	margin: auto;
+	@include media-breakpoint-up(lg) {
+		margin: 0 0 1.5em 1.5em;
+	}
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 15px	;
+	@include media-breakpoint-up(lg) {
+		margin-left: 1.5em;
+	}
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
