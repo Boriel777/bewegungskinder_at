@@ -1,23 +1,37 @@
-# Ignore everything
+# =========================================
+# Ignore everything by default
+# =========================================
 *
 
-# But keep the theme folders
+# =========================================
+# Keep theme folders and all their contents
+# =========================================
 !borielblank/
+!borielblank/**/*
 !borielblank_child/
+!borielblank_child/**/*
 
-# Ignore OS/system files
+# =========================================
+# OS / system files
+# =========================================
 .DS_Store
 Thumbs.db
 
-# Ignore IDE/editor configs
+# =========================================
+# IDE / editor configs
+# =========================================
 .vscode/
 *.sublime-project
 *.sublime-workspace
 
-# Ignore node_modules if you use npm/yarn inside themes
+# =========================================
+# Node / npm / yarn
+# =========================================
 node_modules/
 
-# Ignore logs and temp files
+# =========================================
+# Logs / temp / swap
+# =========================================
 *.log
 *.tmp
 *.swp
