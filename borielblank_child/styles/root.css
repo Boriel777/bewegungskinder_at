@@ -122,7 +122,7 @@
     --radius-lg: 16px;
 
     /* IMAGE SIZE */
-    --img-size: clamp(150px, 10.417rem + 4.167vw, 300px);
+    --img-size: clamp(12.5rem, 10.983rem + 6.472vw, 18.75rem);
 
     /* Z-LAYERS */
     --z-base: 1;
