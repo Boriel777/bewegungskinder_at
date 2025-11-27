@@ -10,7 +10,7 @@ header.container.py-3 {
     background-color: var(--primary-color-light);
     position: fixed;
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Top Nav */
@@ -24,13 +24,13 @@ header.container.py-3 .top-nav {
     background-color: var(--primary-color-dark);
     border-bottom: 8px solid var(--primary-color);
     height: 60px; /* original height */
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
     z-index: 9999;
 }
 
 /* Main Navbar */
 nav.navbar {
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
     padding: 10px var(--menu-padding);
     box-shadow: 0 0 4px 4px rgba(0,0,0,0.15);
 }
@@ -38,7 +38,6 @@ nav.navbar {
 .navbar-brand img {
     width: auto;
     height: 50px; /* original logo height */
-    transition: height 0.3s ease;
 }
 
 /* Menu Items */
@@ -140,7 +139,7 @@ header.container.py-3.scrolled .navbar-brand img {
 /* Fade social & login links on shrink */
 header.container.py-3 .login-links-nav a,
 header.container.py-3 .social-links-nav a {
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
     opacity: 1;
 }
 
@@ -216,7 +215,58 @@ header.container.py-3.scrolled .social-links-nav a {
     content: '\f053';
 }
 
+.wp-block-uagb-post-carousel.uagb-slick-carousel.is-carousel.slick-slider p {
+    padding: 0;
+}
+
 /* Hero Slider Styles END */
+
+/* Gallery Styles */
+
+ul.filebird-block-filebird-gallery.wp-block-gallery {
+    padding: 0 var(--container-padding) !important;
+    justify-content: center;
+}
+
+ul.filebird-block-filebird-gallery li figure {
+    justify-content: center !important;
+}
+
+ul.filebird-block-filebird-gallery.wp-block-gallery li {
+    width: calc(33.33% - .66667em);
+}
+
+.wp-block-gallery:not(.has-nested-images) .blocks-gallery-item img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: var(--img-size);
+    aspect-ratio: 1/1;
+    border: 5px solid var(--primary-color);
+}
+
+ul.filebird-block-filebird-gallery.wp-block-gallery li:nth-child(n+4) {
+    display: none;
+}
+
+/* Gallery Styles END */
+
+/* Single Image Styles */
+
+.wp-block-image img {
+    width: var(--img-size);
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Single Image Styles END */
+
+
 
 /*Content Styles*/
 
@@ -224,6 +274,13 @@ header.container.py-3.scrolled .social-links-nav a {
     display: none;
 }
 
+.wp-block-separator {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    color: var(--color-support-blue);
+}
+
 /* Content Styles END */
 
-/* bewegungskinder-styles END change */
+/* bewegungskinder-styles END */
