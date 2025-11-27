@@ -1,0 +1,229 @@
+/* bewegungskinder-styles */
+
+/* Navigation Styles - Shrink on Scroll */
+
+header.container.py-3 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 !important;
+    background-color: var(--primary-color-light);
+    position: fixed;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Top Nav */
+header.container.py-3 .top-nav {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding: 10px var(--menu-padding);
+    background-color: var(--primary-color-dark);
+    border-bottom: 8px solid var(--primary-color);
+    height: 60px; /* original height */
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+/* Main Navbar */
+nav.navbar {
+    transition: all 0.3s ease;
+    padding: 10px var(--menu-padding);
+    box-shadow: 0 0 4px 4px rgba(0,0,0,0.15);
+}
+
+.navbar-brand img {
+    width: auto;
+    height: 50px; /* original logo height */
+    transition: height 0.3s ease;
+}
+
+/* Menu Items */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color-dark);
+    transition: all 0.1s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+/* Font Awesome social links */
+.fb-link a,
+.ig-link a {
+    display: block;
+    overflow: hidden;
+    color: var(--text-color-on-background);
+    font-weight: var(--font-weight-base);
+    text-align: center;
+    font-size: 0;
+}
+
+.fb-link a::before {
+    content: "\f082";
+    display: inline-block;
+    font-family: 'Font Awesome 7 Brands';
+    font-size: 20px;
+    padding-right: 15px;
+    border-right: solid 1px var(--text-color-on-background);
+}
+
+.ig-link a::before {
+    content: "\f16d";
+    display: inline-block;
+    font-family: 'Font Awesome 7 Brands';
+    font-size: 20px;
+}
+
+/* Login links */
+
+.login-links-nav a {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-base);
+    color: var(--text-color-on-background);
+    padding-left: 10px;
+}
+
+/* Shrinked state */
+header.container.py-3.scrolled .top-nav {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.login-btn a::before {
+    display: inline-block;
+    font-family: "Font Awesome 7 Free";
+    font-size: 15px;
+    font-weight: 900;
+    content: "\f023";
+    padding-right: 8px;
+}
+
+.register-btn a::before {
+    display: inline-block;
+    font-family: "Font Awesome 7 Free";
+    font-size: 15px;
+    content: "\f007";
+    padding-left: 15px;
+    padding-right: 8px;
+    border-left: solid 1px var(--text-color-on-background);
+}
+header.container.py-3.scrolled .navbar {
+    padding: 5px var(--menu-padding);
+}
+
+header.container.py-3.scrolled .navbar ul li a {
+    font-size: var(--font-size-sm);
+}
+
+header.container.py-3.scrolled .navbar-brand img {
+    height: 35px; /* smaller logo */
+}
+
+/* Fade social & login links on shrink */
+header.container.py-3 .login-links-nav a,
+header.container.py-3 .social-links-nav a {
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+header.container.py-3.scrolled .login-links-nav a,
+header.container.py-3.scrolled .social-links-nav a {
+    opacity: 0; /* fade out when scrolled */
+}
+
+
+/* Navigation Styles END */
+
+/* Hero Slider Styles */
+
+.wp-block-uagb-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90dvh;
+    margin-top: 110px;
+
+}
+
+.wp-block-uagb-slider .uagb-ifb-title-prefix {
+    font-size: var(--font-size-md);
+    color: var(--text-color-on-background);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 1.5px;
+}
+
+.uagb-ifb-title {
+    font-size: var(--font-size-xl);
+    text-transform: uppercase;
+    line-height: var(--line-height-sm3);
+    color: var(--primary-color);
+    font-weight: var(--font-weight-base);
+    -webkit-text-stroke: 1px var(--text-color-on-background);
+    text-shadow: 0 0 var(--color-base-neutral-900);
+}
+
+.uagb-infobox-cta-link>svg {
+    margin: 0;
+    transform: scale(1.7) rotate(90deg);
+    fill: var(--text-color-on-background);
+    transition: all .3s ease-in-out;
+}
+
+.uagb-infobox-cta-link>svg:hover {
+    fill: var(--primary-color);
+    transform: scale(1.7) rotate(90deg) translateX(5px);
+}
+
+.uagb-slider-container .swiper-button-prev,
+.uagb-slider-container .swiper-button-next {
+    background: none;
+    padding: 0 100px;
+}
+
+.uagb-slider-container .swiper-button-prev::after,
+.uagb-slider-container .swiper-button-next::after {
+    font-family: 'Font Awesome 7 Free';
+    font-size: 50px!important;
+    font-weight: 900;
+    color: var(--primary-color);
+    -webkit-text-stroke: 1px #fff;
+    text-shadow: 0 0 var(--color-base-neutral-900);
+}
+
+.swiper-button-next:after {
+    content: '\f054';
+}
+
+.swiper-button-prev:after {
+    content: '\f053';
+}
+
+/* Hero Slider Styles END */
+
+/*Content Styles*/
+
+.lead {
+    display: none;
+}
+
+/* Content Styles END */
+
+/* bewegungskinder-styles END change */

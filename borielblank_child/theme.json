@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [
+        { "name": "Primary", "slug": "primary", "color": "#007bff" },
+        { "name": "Secondary", "slug": "secondary", "color": "#6c757d" },
+        { "name": "Success", "slug": "success", "color": "#28a745" },
+        { "name": "Danger", "slug": "danger", "color": "#dc3545" },
+        { "name": "Light", "slug": "light", "color": "#f8f9fa" },
+        { "name": "Dark", "slug": "dark", "color": "#343a40" }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        { "fontFamily": "Noto Sans, sans-serif", "name": "Noto Sans", "slug": "noto-sans" },
+        { "fontFamily": "Noto Serif, serif", "name": "Noto Serif", "slug": "noto-serif" }
+      ]
+    }
+  }
+}

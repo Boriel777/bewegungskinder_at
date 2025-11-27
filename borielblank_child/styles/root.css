@@ -1,0 +1,235 @@
+/*==== root css ====*/
+
+@font-face {
+    font-family: 'Gluten';
+    src: url('../fonts/Gluten-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gluten';
+    src: url('../fonts/Gluten-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gluten';
+    src: url('../fonts/Gluten-Bold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playpen Sans';
+    src: url('../fonts/PlaypenSans-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playpen Sans';
+    src: url('../fonts/PlaypenSans-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playpen Sans';
+    src: url('../fonts/PlaypenSans-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playpen Sans';
+    src: url('../fonts/PlaypenSans-Bold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    /* TYPOGRAPHY VARIABLES */
+    --font-primary: 'Gluten', sans-serif;
+    --font-secondary: 'Playpen Sans', sans-serif;
+    /* FONT SIZE VARIABLES */
+    --font-weight-light: 300;
+    --font-weight-base: normal;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 800;
+    /* COLOR VARIABLES */
+    --primary-color-dark: #7F0B59;
+    --primary-color-light: #FFDEF4;
+    --primary-color: #F914A5;
+    --secondary-color-dark: #040F9A;
+    --secondary-color-light: #E1E3FF;
+    --secondary-color: #4B58FF;
+    --color-support-yellow: #FFF6C2;
+    --color-support-green: #E7F9E7;
+    --color-support-blue: #E7F9E7;
+    --color-support-red: #FFE7E7;
+    --color-base-neutral-50: #FDFBF9;
+    --color-base-neutral-100: #F6F3F1;
+    --color-base-neutral-200: #E7E3DF;
+    --color-base-neutral-400: #B0ABA6;
+    --color-base-neutral-700: #5C5651;
+    --color-base-neutral-900: #1C1C1C;
+    --text-color: var(--color-base-neutral-700);
+    --text-title-color: var(--color-base-neutral-900);
+    --text-color-on-background: #FFFFFF;
+    /* LINE HEIGHT VARIABLES */
+    --line-height-base: 1.6;
+    --line-height-sm: 1.2;
+    --line-height-lg: 1.8;
+    --line-height-base: 1.6;
+}
+
+/* Root LAYOUT responsive */
+
+:root {
+    /* ===== FLUID SPACING SYSTEM ===== */
+    --space-xs: clamp(0.25rem, 0.5vw, 0.5rem);
+    --space-sm: clamp(0.5rem, 1vw, 1rem);
+    --space-md: clamp(1rem, 2vw, 2rem);
+    --space-lg: clamp(2rem, 4vw, 4rem);
+    --space-xl: clamp(3rem, 6vw, 6rem);
+    --space-xxl: clamp(4rem, 8vw, 8rem);
+
+    /* ===== FLUID TYPOGRAPHY ===== */
+    --font-size-sm: clamp(0.875rem, 0.845rem + 0.129vw, 1rem);
+    --font-size-base: clamp(1rem, 0.97rem + 0.129vw, 1.125rem);
+    --font-size-md: clamp(1.25rem, 1.189rem + 0.259vw, 1.5rem);
+    --font-size-lg: clamp(1.625rem, 1.504rem + 0.518vw, 2.125rem);
+    --font-size-xl: clamp(2rem, 1.879rem + 0.518vw, 2.5rem);
+    --font-size-xxl: clamp(3rem, 2.879rem + 0.518vw, 3.5rem);
+
+    /* ===== CONTAINER WIDTH ===== */
+    --menu-padding: clamp(10px, -3.76rem + 15.04vw, 15rem);
+    --container-padding: clamp(0.625rem, -3.167rem + 16.181vw, 16.25rem);
+    --max-content-width: 1200px;
+
+    /* RADIUS */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+
+    /* IMAGE SIZE */
+    --img-size: clamp(150px, 10.417rem + 4.167vw, 300px);
+
+    /* Z-LAYERS */
+    --z-base: 1;
+    --z-menu: 10;
+    --z-overlay: 100;
+    --z-modal: 1000;
+}
+
+
+/* Root LAYOUT responsive END */
+
+/* Root TYPOGRAPHY */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-margin-top: 65px;
+}
+
+html {
+    font-size: var(--font-size-base);
+    scroll-behavior: smooth;
+    
+}
+
+body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #333333;
+}
+
+h1 {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-lg);
+    color: var(--text-title-color);
+}
+
+h2 {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-lg);
+    color: var(--text-title-color);
+}
+
+p {
+    color: var(--text-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-color-dark);
+}
+
+/* Root TYPOGRAPHY END */
+
+/* Root LAYOUT */
+
+.container {
+    max-width:100%;
+    padding: 0;
+    margin: 0;
+}
+
+.wp-block-heading, p, .wp-block-image {
+    padding: 0 var(--container-padding);
+}
+
+ul.filebird-block-filebird-gallery.wp-block-gallery {
+    padding: 0 var(--container-padding) !important;
+}
+
+ul.filebird-block-filebird-gallery.wp-block-gallery li {
+    width: calc(33.33% - .66667em);
+    height: calc(33.33% - .66667em);
+}
+
+.wp-block-gallery:not(.has-nested-images) .blocks-gallery-item img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: var(--img-size);
+    height: var(--img-size);
+}
+
+.wp-block-uagb-post-carousel.uagb-slick-carousel.is-carousel.slick-slider p {
+    padding: 0;
+}
+
+
+
+/* Root LAYOUT END */
+
+/*==== root css END====*/
