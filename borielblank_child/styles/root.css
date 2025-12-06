@@ -104,7 +104,7 @@
     --space-xxl: clamp(4rem, 8vw, 8rem);
 
     /* ===== FLUID TYPOGRAPHY ===== */
-    --font-size-sm: clamp(0.875rem, 0.845rem + 0.129vw, 1rem);
+    --font-size-sm: clamp(0.813rem, 0.782rem + 0.129vw, 0.938rem);
     --font-size-base: clamp(1rem, 0.97rem + 0.129vw, 1.125rem);
     --font-size-md: clamp(1.25rem, 1.189rem + 0.259vw, 1.5rem);
     --font-size-lg: clamp(1.625rem, 1.504rem + 0.518vw, 2.125rem);
