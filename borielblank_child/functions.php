@@ -101,3 +101,4 @@ function borielblank_child_register_menus() {
     ]);
 }
 add_action('after_setup_theme', 'borielblank_child_register_menus');
+
