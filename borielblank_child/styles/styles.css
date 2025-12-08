@@ -10,7 +10,8 @@ header.container.py-3 {
     background-color: var(--primary-color-light);
     position: fixed;
     z-index: 1000;
-    transition: all 0.3s ease-in-out;
+    transition: padding var(--transition-m),
+        height var(--transition-m);
 }
 
 /* Top Nav */
@@ -25,13 +26,14 @@ header.container.py-3 .top-nav {
     border-bottom: 8px solid var(--primary-color);
     height: 60px;
     /* original height */
-    transition: all 0.3s ease-in-out;
+    transition: height var(--transition-m),
+        padding var(--transition-m);
     z-index: 9999;
 }
 
 /* Main Navbar */
 nav.navbar {
-    transition: all 0.3s ease-in-out;
+    transition: padding var(--transition-m);
     padding: 10px var(--menu-padding);
     box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -56,7 +58,8 @@ nav ul li a {
     text-transform: uppercase;
     font-weight: var(--font-weight-bold);
     color: var(--primary-color-dark);
-    transition: all 0.1s ease-in-out;
+    transition: color var(--transition-s),
+        transform var(--transition-s);
 }
 
 nav ul li a:hover {
@@ -143,7 +146,7 @@ header.container.py-3.scrolled .navbar-brand img {
 /* Fade social & login links on shrink */
 header.container.py-3 .login-links-nav a,
 header.container.py-3 .social-links-nav a {
-    transition: all 0.3s ease-in-out;
+    transition: opacity var(--transition-m);
     opacity: 1;
 }
 
@@ -188,7 +191,7 @@ header.container.py-3.scrolled .social-links-nav a {
     margin: 0;
     transform: scale(1.7) rotate(90deg);
     fill: var(--text-color-on-background);
-    transition: all .3s ease-in-out;
+    transition: fill var(--transition-m), transform var(--transition-m);
 }
 
 .uagb-infobox-cta-link>svg:hover {
@@ -263,10 +266,12 @@ ul.filebird-block-filebird-gallery.wp-block-gallery li:nth-child(n+4) {
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid var(--primary-color);
+    transition: transform var(--transition-m);
 }
 
 img:hover {
     transform: scale(1.05);
+    transition: transform var(--transition-m);
 }
 
 /* Single Image Styles END */
@@ -279,6 +284,7 @@ img:hover {
     width: calc(90vw) !important;
     border-radius: var(--radius-xxl);
     padding-top: var(--space-xl);
+    transition: background-color var(--transition-l);
 }
 
 .bd_teaser_slider .slick-list.draggable {
@@ -295,25 +301,6 @@ img:hover {
     align-items: center;
     justify-content: center;
     background: transparent !important;
-}
-
-.bd_teaser_slider .uagb-post__image {
-    height: 350px;
-    aspect-ratio: 3 / 4;
-    padding: 0;
-    border-radius: var(--radius-lg);
-    border: 5px solid var(--primary-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
-}
-
-.bd_teaser_slider .uagb-post__image:hover::after {
-    filter: blur(1px) brightness(0.4);
-}
-
-.bd_teaser_slider .uagb-post__image img {
-    object-fit: cover;
-    height: 100%;
 }
 
 /* Shared arrow base */
@@ -335,9 +322,10 @@ img:hover {
     mask-position: center;
     mask-size: contain;
     margin: auto 0;
-    position:relative;
+    position: relative;
     top: 25px;
-    left: 150px!important;
+    left: var(--space-xxl) !important;
+    transition: transform var(--transition-m);
 }
 
 .bd_teaser_slider .slick-prev:hover {
@@ -352,10 +340,11 @@ img:hover {
     mask-position: center;
     mask-size: contain;
     margin: auto 0;
-    position:relative;
+    position: relative;
     top: 25px;
-    right: 150px!important;
+    right: var(--space-xxl) !important;
     transform: rotate(180deg) translateY(35px);
+    transition: transform var(--transition-m);
 }
 
 .bd_teaser_slider .slick-next:hover {
@@ -367,29 +356,102 @@ img:hover {
     display: none !important;
 }
 
+.bd_teaser_slider .uagb-post__image {
+    position: relative;
+    max-width: 350px;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    padding: 0;
+    border-radius: var(--radius-lg);
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.bd_teaser_slider .uagb-post__image img {
+    object-fit: cover;
+    height: 100%;
+    transition: transform var(--transition-m), filter var(--transition-m);
+}
+
+.bd_teaser_slider article:hover img {
+    transform: scale(1.2);
+    filter: brightness(60%) blur(1px);
+}
 
 .bd_teaser_slider .uagb-post__title {
     position: absolute;
+    width: var(--img-size-xl);
     font-family: var(--font-primary);
     font-weight: var(--font-weight-bold);
     bottom: 40px;
-    color: var(--text-color-on-background)
+    color: var(--text-color-on-background);
+    transition: bottom var(--transition-s);
+}
+
+.bd_teaser_slider article:hover .uagb-post__title {
+    bottom: 70%;
 }
 
 .bd_teaser_slider .uagb-post__excerpt {
-    display: none;
-    padding: 0 10px;
+    opacity: 0;
+    width: var(--img-size-xl);
+    pointer-events: none;
+    padding: 0 20px;
     position: absolute;
     color: #fff;
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-light);
     bottom: 35%;
+    transition: opacity var(--transition-l), bottom var(--transition-l);
+}
+
+.bd_teaser_slider article:hover .uagb-post__excerpt {
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 50%;
+}
+
+.bd_teaser_slider .uagb-post__excerpt p {
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .bd_teaser_slider .uagb-post__cta {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
     position: absolute;
     bottom: 10%;
+    transition: opacity var(--transition-m), bottom var(--transition-m);
+}
+
+.bd_teaser_slider article:hover .uagb-post__cta {
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 15%;
+}
+
+.bd_teaser_slider .uagb-post__cta a {
+    display: block;
+    position: relative;
+    background-color: var(--primary-color);
+    color: var(--text-color-on-background);
+    padding: 10px 20px;
+    border-radius: var(--radius-xxl);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: var(--font-size-sm);
+    transition: background-color var(--transition-m), transform var(--transition-m);
+}
+
+.bd_teaser_slider .uagb-post__cta a:hover {
+    background-color: var(--primary-color-dark);
+    transform: scale(1.1);
 }
 
 .bd_teaser_slider .uagb-post__image::after {
@@ -400,33 +462,36 @@ img:hover {
     width: 100%;
     display: block;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 80%);
-    transition: all 0.3s ease-in-out;
 }
 
 /* Teaser Slider Styles END */
 
 /* Swiper Bullets - Global */
 
-div.wp-block-uagb-slider > .swiper-pagination-bullets > span.swiper-pagination-bullet {
+div.wp-block-uagb-slider>.swiper-pagination-bullets>span.swiper-pagination-bullet {
     background: var(--color-base-neutral-200);
     opacity: 0.8;
     filter: drop-shadow(0 0 4px var(--drop-shadow-color-dark));
+    transition: background var(--transition-m), opacity var(--transition-m);
 }
 
-div.wp-block-uagb-slider > .swiper-pagination-bullets > span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+div.wp-block-uagb-slider>.swiper-pagination-bullets>span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     background: var(--primary-color);
     opacity: 1;
+    transition: background var(--transition-m), opacity var(--transition-m);
 }
 
-.uagb-slick-carousel > .slick-dots > li button::before {
-    color: var(--color-base-neutral-200)!important;
-    opacity: 0.8!important;
+.uagb-slick-carousel>.slick-dots>li button::before {
+    color: var(--color-base-neutral-200) !important;
+    opacity: 0.8 !important;
     filter: drop-shadow(0 0 2px var(--drop-shadow-color-dark));
+    transition: color var(--transition-m), opacity var(--transition-m);
 }
 
-.uagb-slick-carousel > .slick-dots > li.slick-active button::before {
-    color: var(--primary-color)!important;
-    opacity: 1!important;
+.uagb-slick-carousel>.slick-dots>li.slick-active button::before {
+    color: var(--primary-color) !important;
+    opacity: 1 !important;
+    transition: color var(--transition-m), opacity var(--transition-m);
 }
 
 /* Swiper Bullets - Global END*/
@@ -442,6 +507,9 @@ div.wp-block-uagb-slider > .swiper-pagination-bullets > span.swiper-pagination-b
     margin-right: auto;
     width: 50%;
     color: var(--color-support-blue);
+    border-top: solid 4px;
+    border-radius: 4px;
+
 }
 
 article h1 {

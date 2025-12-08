@@ -11,6 +11,10 @@
         /* Tablet: 2 per row */
     }
 
+    .bd_teaser_slider .slick-arrow {
+        display: none!important;
+    }
+
 }
 
 /*tablet END*/
@@ -24,6 +28,10 @@
         max-width: 100%;
         width: 100%!important;
         /* Mobile: 1 per row */
+    }
+
+    .bd_teaser_slider .slick-arrow {
+        display: none!important;
     }
 
 }

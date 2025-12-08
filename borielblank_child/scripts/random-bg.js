@@ -18,11 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             clearInterval(waitForSlick);
 
-            jQuery(slider).on("afterChange", function () {
-                slider.style.backgroundColor = colors[index];
-
+            jQuery(slider).on("beforeChange", function () {
                 // increment index in perfect loop
                 index = (index + 1) % colors.length;
+                slider.style.backgroundColor = colors[index];
             });
 
         }

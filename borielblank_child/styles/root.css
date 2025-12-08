@@ -92,6 +92,14 @@
     --line-height-sm: 1.2;
     --line-height-lg: 1.8;
     --line-height-base: 1.6;
+    /* TRANSITIONS AND ANIMATIONS VARIABLES */
+    --transition-duration: 0.3s;
+    --transition-easing: ease-in-out;
+    --transition-short-duration: 0.15s;
+    --transition-long-duration: 0.5s;
+    --transition-s: var(--transition-short-duration) var(--transition-easing);
+    --transition-m: var(--transition-duration) var(--transition-easing);
+    --transition-l: var(--transition-long-duration) var(--transition-easing);
 }
 
 /* Root LAYOUT responsive */
@@ -126,6 +134,7 @@
 
     /* IMAGE SIZE */
     --img-size: clamp(12.5rem, 10.983rem + 6.472vw, 18.75rem);
+    --img-size-xl: clamp(11.25rem, 4.167rem + 11.068vw, 21.875rem);
 
     /* Z-LAYERS */
     --z-base: 1;
@@ -144,7 +153,6 @@
     padding: 0;
     box-sizing: border-box;
     scroll-margin-top: 65px;
-    transition: all 0.3s ease-in-out;
 }
 
 html {
