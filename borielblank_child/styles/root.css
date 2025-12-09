@@ -224,7 +224,7 @@ article.mb-4 {
     margin: 0;
 }
 
-.wp-block-heading, p, .wp-block-image {
+.wp-block-heading, main p, main .wp-block-image {
     padding: 0 var(--container-padding);
 }
 

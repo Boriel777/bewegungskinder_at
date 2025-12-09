@@ -102,3 +102,11 @@ function borielblank_child_register_menus() {
 }
 add_action('after_setup_theme', 'borielblank_child_register_menus');
 
+/* Shortcode for copyright */
+
+function bd_copyright_shortcode() {
+    return '<p class="bd_copyright">&copy; ' . date('Y') . ' Bewegungskinder. Alle Rechte vorbehalten.</p>';
+}
+add_shortcode('bd_copyright', 'bd_copyright_shortcode');
+
+
