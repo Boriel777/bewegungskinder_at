@@ -12,7 +12,7 @@ if ($footer_post) {
     echo '<p>Please create a post titled "Footer" to display here.</p>';
 }
 ?>
-<a class="bd_tribute" href="https://www.boriel-designs.com"><p>Made by: <img src="http://bewegungskinder.local/wp-content/uploads/2025/10/White_Mark_Boriel_Designs@3x.png" alt="boriel designs logo"></p></a>
+<a class="bd_tribute" href="https://www.boriel-designs.com" target="_blank" rel="noopener noreferrer"><p>Made by: <img src="http://bewegungskinder.local/wp-content/uploads/2025/10/White_Mark_Boriel_Designs@3x.png" alt="boriel designs logo"></p></a>
 </footer>
 <?php wp_footer(); ?>
 </body>
