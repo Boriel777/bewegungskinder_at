@@ -58,17 +58,23 @@ nav ul li a {
     text-transform: uppercase;
     font-weight: var(--font-weight-bold);
     color: var(--primary-color-dark);
-    transition: color var(--transition-s),
-        transform var(--transition-s);
+    transition: all var(--transition-s);
 }
 
 nav ul li a:hover {
     color: var(--primary-color);
-    transform: scale(1.05);
     text-decoration: none;
+    display: inline;
 }
 
 /* Font Awesome social links */
+
+nav.social-links-nav #menu-social-links.social-list, ul.bd_footer_social_nav{
+    gap: 0;
+    display: inline-flex;
+    align-items: baseline;
+}
+
 .fb-link a,
 .ig-link a {
     display: block;
@@ -83,16 +89,29 @@ nav ul li a:hover {
     content: "\f082";
     display: inline-block;
     font-family: 'Font Awesome 7 Brands';
+    margin-right: 5px;
     font-size: 20px;
-    padding-right: 15px;
-    border-right: solid 1px var(--text-color-on-background);
+}
+
+.fb-link a::after {
+    content: "|";
+    display: inline-block;
+    margin-right: 5px;
+    font-size: var(--font-size-md);
+    color: var(--text-color-on-background);
 }
 
 .ig-link a::before {
     content: "\f16d";
     display: inline-block;
+    margin-right: 5px;
     font-family: 'Font Awesome 7 Brands';
     font-size: 20px;
+}
+
+.fb-link a:hover::before, .ig-link a:hover::before {
+    transform: scale(1.1);
+    transition: transform var(--transition-m);
 }
 
 /* Login links */
@@ -167,7 +186,8 @@ header.container.py-3.scrolled .social-links-nav a {
     justify-content: center;
     height: 90dvh;
     margin-top: 110px;
-
+    border-radius: 0 0 50px 50px;
+    box-shadow: 0 5px 15px var(--primary-color-dark)!important;
 }
 
 .wp-block-uagb-slider .uagb-ifb-title-prefix {
@@ -175,6 +195,11 @@ header.container.py-3.scrolled .social-links-nav a {
     color: var(--text-color-on-background);
     font-weight: var(--font-weight-bold);
     letter-spacing: 1.5px;
+}
+
+.wp-block-uagb-slider .swiper-wrapper .swiper-content {
+    display: block;
+    background: radial-gradient(ellipse 70% 70%, rgba(0,0,0,0.70), rgba(0,0,0,0) 70%);
 }
 
 .uagb-ifb-title {
@@ -203,6 +228,7 @@ header.container.py-3.scrolled .social-links-nav a {
 .uagb-slider-container .swiper-button-next {
     background: none;
     padding: 0 100px;
+    right: 0!important;
 }
 
 .uagb-slider-container .swiper-button-prev::after,
@@ -279,11 +305,11 @@ img:hover {
 /* Teaser Slider Styles */
 
 .bd_teaser_slider.wp-block-uagb-post-carousel {
+    width: 90% !important;
     background-color: var(--primary-color-light);
-    margin: 0 5vw;
-    width: calc(90vw) !important;
+    padding: var(--space-xl) 0 0 0;
+    margin-inline: auto;
     border-radius: var(--radius-xxl);
-    padding-top: var(--space-xl);
     transition: background-color var(--transition-l);
 }
 
@@ -481,6 +507,10 @@ div.wp-block-uagb-slider>.swiper-pagination-bullets>span.swiper-pagination-bulle
     transition: background var(--transition-m), opacity var(--transition-m);
 }
 
+.uagb-slick-carousel>.slick-dots {
+    margin-bottom: 20px !important;
+}
+
 .uagb-slick-carousel>.slick-dots>li button::before {
     color: var(--color-base-neutral-200) !important;
     opacity: 0.8 !important;
@@ -617,10 +647,27 @@ footer .wp-block-image img {
     gap: 10px;
 }
 
+.bd_footer_nav a {
+    color: var(--secondary-color-dark)!important;
+    text-transform: unset;
+    font-weight: var(--font-weight-base);
+    transition: color var(--transition-s), transform var(--transition-s), font-weight var(--transition-s);
+}
+
+.bd_footer_nav a:hover {
+    color: var(--primary-color);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+}
+
 .bd_copyright_wrapper {
     display: flex;
     flex-direction: row;
     padding: 0 var(--container-padding);
+}
+
+.bd_copyright_wrapper .fb-link a::before, .bd_copyright_wrapper .ig-link a::before {
+    color: var(--color-support-blue);
 }
 
 .bd_copyright {
@@ -643,20 +690,6 @@ footer .wp-block-image img {
     height: auto;
     width: 50px;
 }
-
-footer .wp-classic-menu-block>.menu li {
-    padding: 0;
-}
-
-footer .ig-link a {
-    text-decoration: none;
-}
-    
-footer .ig-link a::before {
-    display: block;
-    padding-left: 8px;
-}
-
 
 /* Footer Styles END */
 
